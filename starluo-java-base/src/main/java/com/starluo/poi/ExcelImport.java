@@ -28,7 +28,7 @@ public class ExcelImport {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException, ParseException {
-        List<FortuneDetailRO> loadScoreInfoList = readExcel("C:\\61.xls");
+        List<FortuneDetailRO> loadScoreInfoList = readExcel("C:\\62.xls");
         for (int i = 0; i < loadScoreInfoList.size(); i++) {
             System.out.println(loadScoreInfoList.get(i).toString());
         }
@@ -76,7 +76,7 @@ public class ExcelImport {
                 HSSFCell cell = hssfRow.getCell(1);
                 DataFormatter formatter = new DataFormatter();
                 String cellValue = formatter.formatCellValue(cell);
-                if (Long.parseLong(cellValue) > 20180601L && Long.parseLong(cellValue) < 20180606L) {
+                if (Long.parseLong(cellValue) > 20180605L && Long.parseLong(cellValue) < 20180611L) {
 
                 } else {
                     continue;
